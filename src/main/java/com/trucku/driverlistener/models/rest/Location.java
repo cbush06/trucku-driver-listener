@@ -1,4 +1,4 @@
-package com.trucku.driverlistener.domain;
+package com.trucku.driverlistener.models.rest;
 
 import java.math.BigDecimal;
 

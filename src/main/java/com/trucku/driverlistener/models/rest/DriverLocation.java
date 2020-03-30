@@ -1,11 +1,13 @@
-package com.trucku.driverlistener.domain;
+package com.trucku.driverlistener.models.rest;
 
 import java.io.Serializable;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 public class DriverLocation extends Location implements Serializable {
 

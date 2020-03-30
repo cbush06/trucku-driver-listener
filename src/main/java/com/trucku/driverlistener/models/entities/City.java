@@ -1,9 +1,8 @@
-package com.trucku.driverlistener.models;
+package com.trucku.driverlistener.models.entities;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.time.Instant;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -39,7 +38,7 @@ public class City implements Serializable {
     private BigDecimal latitude;
 
     @Column(name = "lon")
-    private BigInteger longitude;
+    private BigDecimal longitude;
 
     @Column(name = "population")
     private BigInteger population;
