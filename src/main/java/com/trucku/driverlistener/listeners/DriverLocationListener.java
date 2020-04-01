@@ -1,9 +1,5 @@
 package com.trucku.driverlistener.listeners;
 
-import java.math.BigInteger;
-import java.util.List;
-
-import com.trucku.driverlistener.models.entities.City;
 import com.trucku.driverlistener.models.rest.DriverLocation;
 import com.trucku.driverlistener.services.CityService;
 
