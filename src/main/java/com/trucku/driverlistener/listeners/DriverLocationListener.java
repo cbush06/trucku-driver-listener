@@ -20,13 +20,10 @@ public class DriverLocationListener {
     
     private static Logger log = LogManager.getLogger(DriverLocationListener.class);
 
-    private CityService citySvc;
     private RedisOperations<String, String> redisOps;
 
     @KafkaListener(id = "driver-listener", topics = "driver-locations")
     public void listen(DriverLocation location) {
-        // List<City> nearbyCities = citySvc.findCitiesInRadiusNear(location, BigInteger.valueOf(50L));
-        // log.info(nearbyCities);
         GeoOperations<String, String> geoOps = redisOps.opsForGeo();
         Long itemsAdded = geoOps.add("driver-locations", new Point(location.getLongitude().doubleValue(), location.getLatitude().doubleValue()), location.getDriver());
         log.info("Added {} items to [{}]", itemsAdded, "driver-locations");
